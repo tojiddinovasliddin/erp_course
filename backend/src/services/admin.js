@@ -9,15 +9,14 @@ import fs from "fs"
 
 class StaffServic {
     async createStaff(req) {
-
-        const { fullname, phone, password, role } = req.body
+        const { fullname, phone, password} = req.body
         let check_user = await pool.query("select * from users where phone = $1", [phone])
         if (check_user.rows.length) {
             throw new ErrorExteption(409, "The user registered with this phone")
 
 
         }
-        await pool.query("insert into users(fullname,phone,password,role) values($1,$2,$3,$4)", [fullname, phone, await argon2.hash(password), role])
+        await pool.query("insert into users(fullname,phone,password,role) values($1,$2,$3,$4)", [fullname, phone, await argon2.hash(password),'admin'])
         return {
             status: 201,
             message: "The user added successfully"
@@ -58,11 +57,17 @@ class StaffServic {
         if (password) {
             await pool.query("update users set password = $1 where id = $2", [, staff_id])
         }
-        if (photo) {
 
-            await pool.query("update users set photo = $1 where id = $2", [new Date().getTime() + photo.name.split(".")[1], staff_id])
-            photo.mv(path.join(process.cwd(), "src", "uploads","admin", `${new Date().getTime() + path.extname(photo.name)}`), (error) => console.log(error))
-
+        const check_photo = ["png", "jpg", "webp", "svg", "gif", "avif", "ico"]
+        if (photo){
+            const photos = photo.name.split(".").at(-1)
+            if (!check_photo.includes(photos)) {
+                throw new ErrorExteption(415, "Unsupported media type")
+            }
+            else {
+                await pool.query("update users set photo = $1 where id = $2", [new Date().getTime() + photo.name.split(".")[1], staff_id])
+                photo.mv(path.join(process.cwd(), "src", "uploads", "admin", `${new Date().getTime() + path.extname(photo.name)}`), (error) => console.log(error))
+            }
         }
         return {
             status: 201,
@@ -71,6 +76,7 @@ class StaffServic {
     }
 
     async allStaffActive(req) {
+
         let all_staff = await pool.query("select id,fullname,phone,photo,role,create_at,status from users where role = $1 and status = $2", ['admin', 'active'])
         return{
             status: 200,

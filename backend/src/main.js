@@ -20,7 +20,7 @@ app.use((error, req, res, next) => {
     }
     else {
         console.log(error.message)
-        fs.appendFileSync(path.join(process.cwd(),"src","log","logger.txt"),new Date().toLocaleString + error.message + "\n")
+        fs.appendFileSync(path.join(process.cwd(),"src","log","logger.txt"),`\r\n[${new Date().toLocaleString()}] - ${req.method} - ${req.url} - ${error.message}`)
         return res.status(500).json({
             status: 500,
             message:"Mistake on backend"

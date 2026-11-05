@@ -1,1 +1,104 @@
-DD
+[11/3/2026, 7:02:17 PM] - GET - /erp/course/allStaff/active - next is not defined
+
+[11/3/2026, 7:11:19 PM] - POST - /erp/course/auth/login - pchstr must contain a $ as first char
+[11/3/2026, 7:12:34 PM] - POST - /erp/course/auth/login - pchstr must contain a $ as first char
+[11/3/2026, 7:16:06 PM] - POST - /erp/course/auth/login - pchstr must contain a $ as first char
+[11/3/2026, 7:26:33 PM] - PUT - /erp/course/update/Mentor/24 - png is not defined
+[11/3/2026, 7:27:26 PM] - PUT - /erp/course/update/Mentor/24 - photo.name.split(...)[1].include is not a function
+[11/3/2026, 9:09:00 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:11:51 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:12:14 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:14:56 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:15:13 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:15:28 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:16:19 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/3/2026, 9:16:33 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/4/2026, 8:15:54 AM] - GET - /erp/course/all/CourseInactive - courseService.allCourseInactive is not a function
+[11/4/2026, 8:24:43 AM] - POST - /erp/course/add/NewCourse - Cannot read properties of undefined (reading 'length')
+[11/4/2026, 8:25:24 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/4/2026, 8:26:08 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/4/2026, 8:27:01 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/4/2026, 8:28:39 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/4/2026, 8:30:04 AM] - POST - /erp/course/category/addNew - column "status" does not exist
+[11/4/2026, 8:31:04 AM] - POST - /erp/course/category/addNew - column "status" does not exist
+[11/4/2026, 8:31:30 AM] - POST - /erp/course/category/addNew - column "status" does not exist
+[11/4/2026, 9:22:13 AM] - PUT - /erp/course/category/update/1 - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/4/2026, 9:22:32 AM] - PUT - /erp/course/category/update/1 - relation "course_category" does not exist
+[11/4/2026, 9:41:08 AM] - PUT - /erp/course/update/Course/8 - null value in column "description" of relation "course" violates not-null constraint
+[11/4/2026, 11:49:56 AM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/4/2026, 11:52:15 AM] - POST - /erp/course/add/NewCourse - courseService.AddCourse is not a function
+[11/4/2026, 2:17:50 PM] - POST - /erp/course/add/newAssistant - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/4/2026, 2:17:53 PM] - POST - /erp/course/add/newAssistant - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/4/2026, 2:18:19 PM] - POST - /erp/course/add/newAssistant - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/4/2026, 2:18:23 PM] - POST - /erp/course/add/newAssistant - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/4/2026, 2:19:55 PM] - POST - /erp/course/add/newAssistant - copurse_id is not defined
+[11/4/2026, 2:20:22 PM] - POST - /erp/course/add/newAssistant - copurse_id is not defined
+[11/4/2026, 2:20:36 PM] - POST - /erp/course/add/newAssistant - insert or update on table "users" violates foreign key constraint "users_course_id_fkey"
+[11/4/2026, 2:23:02 PM] - POST - /erp/course/add/newAssistant - insert or update on table "users" violates foreign key constraint "users_course_id_fkey"
+[11/4/2026, 2:56:17 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/4/2026, 2:57:32 PM] - POST - /erp/course/add/NewCourse - INSERT has more expressions than target columns
+[11/4/2026, 2:58:05 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_mentor_id_fkey"
+[11/4/2026, 3:01:22 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_mentor_id_fkey"
+[11/4/2026, 3:01:36 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_mentor_id_fkey"
+[11/4/2026, 3:14:34 PM] - GET - /erp/course/show/aCourse/6 - courseService.showAcourse is not a function
+[11/4/2026, 3:16:54 PM] - GET - /erp/course/show/aCourse/6 - bind message supplies 1 parameters, but prepared statement "" requires 0
+[11/4/2026, 3:17:21 PM] - GET - /erp/course/show/aCourse/6 - bind message supplies 1 parameters, but prepared statement "" requires 0
+[11/4/2026, 4:00:35 PM] - POST - /erp/course/add/assistent/to/course/12 - Cannot read properties of undefined (reading 'status')
+[11/4/2026, 4:01:09 PM] - POST - /erp/course/add/assistent/to/course/12 - Cannot read properties of undefined (reading 'status')
+[11/4/2026, 4:02:29 PM] - POST - /erp/course/add/assistent/to/course/12 - Cannot access 'assistant_id' before initialization
+[11/4/2026, 4:02:50 PM] - POST - /erp/course/add/assistent/to/course/12 - Cannot read properties of undefined (reading 'status')
+[11/4/2026, 4:03:07 PM] - POST - /erp/course/add/assistent/to/course/12 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/4/2026, 4:03:43 PM] - POST - /erp/course/add/assistent/to/course/25 - Cannot read properties of undefined (reading 'status')
+[11/4/2026, 4:04:04 PM] - POST - /erp/course/add/assistent/to/course/25 - Cannot read properties of undefined (reading 'status')
+[11/4/2026, 4:04:32 PM] - PUT - /erp/course/add/assistent/to/course/25 - Cannot read properties of undefined (reading 'status')
+[11/4/2026, 4:06:56 PM] - PUT - /erp/course/add/assistent/to/course/25 - unterminated quoted string at or near "'asistant"
+[11/4/2026, 4:07:16 PM] - PUT - /erp/course/add/assistent/to/course/25 - column "role" does not exist
+[11/4/2026, 4:14:25 PM] - PUT - /erp/course/add/assistent/to/course/24 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/4/2026, 4:14:45 PM] - PUT - /erp/course/add/assistent/to/course/24 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/4/2026, 4:14:59 PM] - PUT - /erp/course/add/assistent/to/course/24 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/4/2026, 4:15:22 PM] - PUT - /erp/course/add/assistent/to/course/24 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/4/2026, 4:42:57 PM] - DELETE - /erp/course/delete/assistent/to/course/1 - Cannot destructure property 'assistant_id' of 'req.body' as it is undefined.
+[11/4/2026, 4:43:00 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - Cannot destructure property 'assistant_id' of 'req.body' as it is undefined.
+[11/4/2026, 4:43:22 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - Cannot destructure property 'assistant_id' of 'req.body' as it is undefined.
+[11/4/2026, 4:43:44 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - Cannot destructure property 'assistant_id' of 'req.body' as it is undefined.
+[11/4/2026, 4:44:04 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - Cannot destructure property 'assistant_id' of 'req.body' as it is undefined.
+[11/4/2026, 4:44:23 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - courseService.deleteAssistent is not a function
+[11/4/2026, 4:44:33 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - invalid input syntax for type integer: "assistant_id"
+[11/4/2026, 4:45:54 PM] - DELETE - /erp/course/delete/assistent/to/course/10 - invalid input syntax for type integer: "assistant_id"
+[11/4/2026, 4:50:05 PM] - DELETE - /erp/course/delete/assistent/to/course/12 - invalid input syntax for type integer: ""
+[11/4/2026, 4:53:23 PM] - DELETE - /erp/course/delete/assistent/to/course/12 - invalid input syntax for type integer: "null"
+[11/4/2026, 4:54:38 PM] - DELETE - /erp/course/delete/assistent/to/course/12 - could not determine data type of parameter $1
+[11/4/2026, 5:22:15 PM] - POST - /erp/course/auth/login - Cannot destructure property 'phone' of 'req.body' as it is undefined.
+[11/4/2026, 5:22:31 PM] - POST - /erp/course/auth/login - Cannot destructure property 'phone' of 'req.body' as it is undefined.
+[11/4/2026, 5:25:55 PM] - PUT - /erp/course/update/Assistant/28 - mentor_id is not defined
+[11/4/2026, 5:53:22 PM] - PUT - /erp/course/update/Course/6 - banner.includes is not a function
+[11/4/2026, 5:54:27 PM] - PUT - /erp/course/update/Course/6 - intro_video.includes is not a function
+[11/4/2026, 5:56:36 PM] - PUT - /erp/course/update/Course/64 - 400
+[11/4/2026, 5:57:05 PM] - PUT - /erp/course/update/Course/64 - 400
+[11/4/2026, 5:57:46 PM] - PUT - /erp/course/update/Course/64 - 400
+[11/4/2026, 5:57:53 PM] - PUT - /erp/course/update/Course/64 - 400
+[11/4/2026, 5:58:39 PM] - PUT - /erp/course/update/Course/134 - 400
+[11/4/2026, 6:01:53 PM] - PUT - /erp/course/update/Course/12 - bind message supplies 1 parameters, but prepared statement "" requires 2
+[11/4/2026, 6:07:45 PM] - PUT - /erp/course/update/Course/12 - photo is not defined
+[11/4/2026, 6:08:16 PM] - PUT - /erp/course/update/Course/12 - photo is not defined
+[11/4/2026, 6:23:36 PM] - PUT - /erp/course/update/Assistant/28 - staff_id is not defined
+[11/4/2026, 7:09:28 PM] - GET - /erp/course/show/aMentor/24 - syntax error at or near "$"
+[11/4/2026, 7:25:03 PM] - GET - /erp/course/show/aAssistant/28 - assistantService.showA_assistant is not a function
+[11/4/2026, 8:35:20 PM] - POST - /erp/course/user/added/newCourse/31 - Cannot access 'check_course' before initialization
+[11/4/2026, 8:35:46 PM] - POST - /erp/course/user/added/newCourse/31 - column "course_id" does not exist
+[11/4/2026, 8:54:43 PM] - GET - /erp/course/user/showAstudent/25 - missing FROM-clause entry for table "student"
+[11/4/2026, 8:55:19 PM] - GET - /erp/course/user/showAstudent/25 - missing FROM-clause entry for table "student"
+[11/4/2026, 8:55:30 PM] - GET - /erp/course/user/showAstudent/25 - missing FROM-clause entry for table "student"
+[11/4/2026, 9:00:08 PM] - GET - /erp/course/user/showAstudent/30 - syntax error at or near "="
+[11/4/2026, 9:00:24 PM] - GET - /erp/course/user/showAstudent/30 - syntax error at or near "="
+[11/4/2026, 9:05:05 PM] - GET - /erp/course/user/showAstudent/30 - column "users.id" must appear in the GROUP BY clause or be used in an aggregate function
+[11/4/2026, 9:22:23 PM] - PUT - /erp/course/delete/AStudent/Course/30 - Cannot destructure property 'course_id' of 'req.body' as it is undefined.
+[11/4/2026, 9:22:55 PM] - PUT - /erp/course/delete/AStudent/Course/30 - Cannot access 'cnt' before initialization
+[11/5/2026, 8:03:55 AM] - POST - /erp/course/user/added/newCourse/31 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 8:05:16 AM] - POST - /erp/course/user/added/newCourse/1 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 8:05:31 AM] - POST - /erp/course/user/added/newCourse/1 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 8:07:26 AM] - PUT - /erp/course/delete/AStudent/ACourse/30 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 8:07:59 AM] - PUT - /erp/course/delete/AStudent/ACourse/30 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 8:08:25 AM] - PUT - /erp/course/delete/AStudent/ACourse/30 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 8:08:51 AM] - PUT - /erp/course/delete/AStudent/ACourse/30 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 9:16:13 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_mentor_id_fkey"

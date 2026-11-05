@@ -32,7 +32,7 @@ class MentorControllers{
     }
     async allMentor(req, res,next) {
         try {
-            const data = await mentorService.allMentor(req)
+            const data = await mentorService.allMentor(req,next)
             return res.status(data.status).json(data)
         } catch (error) {
             next(error)
@@ -58,6 +58,22 @@ class MentorControllers{
     async changeToActive(req, res, next) {
         try {
             const data = await mentorService.changeActive(req)
+            return res.status(data.status).json(data)
+        } catch (error) {
+            next(error)
+        }
+    }
+    async showAMentor(req, res, next) {
+        try {
+            const data = await mentorService.showAMentor(req)
+            return res.status(data.status).json(data)
+        } catch (error) {
+            next(error)
+        }
+    }
+    async showATeacherCourses(req, res, next) {
+        try {
+            const data = await mentorService.showATeacherCourses(req)
             return res.status(data.status).json(data)
         } catch (error) {
             next(error)

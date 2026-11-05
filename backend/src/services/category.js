@@ -48,7 +48,6 @@ class CourseCategoryServer{
         }
     }
     async UpdateCategory(req) {
-        console.log("S")
         const { category_id } = req.params
         const { name } = req.body
         const check_category = await pool.query("select * from category")
@@ -56,7 +55,7 @@ class CourseCategoryServer{
             throw new Error(400,"Category not found");
         }
 
-        await pool.query("update course_category set name =$1 where id = $2", [name, category_id])
+        await pool.query("update category set name =$1 where id = $2", [name, category_id])
         return {
             status: 201,
             message:"Update successfully"
@@ -64,7 +63,7 @@ class CourseCategoryServer{
 
     }
     async changeActive(req) {
-        d
+
         const { category_id } = req.params
         const check_category = await pool.query("select * from category where id = $1 and status !=$2", [category_id,'active'])
         if (!check_category.rows.length) {

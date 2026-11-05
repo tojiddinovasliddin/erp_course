@@ -33,7 +33,7 @@ class StaffControllers{
            const data = await staffServic.allStaffActive(req)
            return res.status(data.status).json(data)
        } catch (error) {
-            console.log(error.message)
+        return next(error)
        }
     }
     async allStaffInactive(req,res,next) {

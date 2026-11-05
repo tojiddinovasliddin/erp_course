@@ -5,13 +5,14 @@ import path from "path"
 
 class MentorService{
     async addNewMentor(req) {
-        const { fullname, phone, password, experience, job, website, info, facebook, telegram, instagram, linkedin, github, role } = req.body
+        const { fullname, phone, password, experience, job, website, info, facebook, telegram, instagram, linkedin, github} = req.body
         let check_user = await pool.query("select * from users where phone = $1", [phone])
         if (check_user.rows.length) {
             throw new ErrorExteption(409, "The user registered with this phone")
         }
+
         await pool.query("insert into users(fullname, phone, password, experience, job, website, info, facebook, telegram, instagram, linkedin, github, role)values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
-            [fullname, phone, password,  experience, job, website, info, facebook, telegram, instagram, linkedin, github, role]
+            [fullname, phone, await argon.hash(password),  experience, job, website, info, facebook, telegram, instagram, linkedin, github, 'mentor']
         )
             return{
             status: 201,
@@ -59,10 +60,16 @@ class MentorService{
         if (github) {
             await pool.query("update users set github = $1 where id = $2", [github, mentor_id])
         }
+        const check_photo = ["png", "jpg", "webp", "svg", "gif", "avif", "ico"]
         if (photo) {
-            await pool.query("update users set photo = $1 where id = $2", [new Date().getTime() + photo.name.split(".")[1], mentor_id])
-            photo.mv(path.join(process.cwd(), "src", "uploads", "mentor", `${new Date().getTime() + path.extname(photo.name)}`), (error) => console.log(error))
-
+            const photos = photo.name.split(".").at(-1)
+            if (!check_photo.includes(photos)) {
+                throw new ErrorExteption(415, "Unsupported media type")
+            }
+            else {
+                await pool.query("update users set photo = $1 where id = $2", [new Date().getTime() + photo.name.split(".")[1], mentor_id])
+                photo.mv(path.join(process.cwd(), "src", "uploads", "admin", `${new Date().getTime() + path.extname(photo.name)}`), (error) => console.log(error))
+            }
         }
         return {
             status: 201,
@@ -84,21 +91,21 @@ class MentorService{
         }
     }
     async allMentor(req) {
-        let all_mentor = await pool.query("select * from users where role ilike 'mentor'")
+        const all_mentor = await pool.query("select * from users where role =$1",['mentor'])
         return{
             status: 200,
             message:all_mentor.rows
         }
     }
     async allMentorActive(req) {
-        let all_mentorActive = await pool.query("select * from users where role ilike 'mentor' and status = 'active'")
+        const all_mentorActive = await pool.query("select * from users where role =$1 and status = $2", ['mentor','active'])
         return{
             status: 200,
             message: all_mentorActive.rows
         }
     }
     async allMentorInactive(req) {
-        let all_mentorActive = await pool.query("select * from users where role ilike 'mentor' and status = 'inactive'")
+        const all_mentorActive = await pool.query("select * from users where role =$1 and status = $2",['mentor','inactive'])
         return{
             status: 200,
             message: all_mentorActive.rows
@@ -109,7 +116,6 @@ class MentorService{
         console.log(mentor_id)
         console.log(req.params)
         const check_mentor = await pool.query("select * from users where id = $1 and role = $2 and status !=$3", [mentor_id, 'mentor', 'active'])
-        console.log(check_mentor)
         if (!check_mentor.rows.length) {
             throw new ErrorExteption(400, "Mentor not found")
         }
@@ -117,6 +123,26 @@ class MentorService{
         return {
             status: 201,
             message:"Update successfully"
+        }
+    }
+    async showAMentor(req) {
+        const { mentor_id } = req.params
+        const mentor = await pool.query("select * from users inner join course on users.id = course.mentor_id where users.id = $1 and users.role = $2",[mentor_id,'mentor'])
+        return {
+            status: 200,
+            data:mentor.rows
+        }
+    }
+    async showATeacherCourses(req) {
+        const { mentor_id } = req.params
+        const check_mentor = await pool.query("select  * from users where id = $1 and role = $2", [mentor_id, "mentor"])
+        if (!check_mentor.rows.length) {
+            throw new ErrorExteption(404,"You are not mentor")
+        }
+        const aTeacherCourse = await pool.query("select * from users inner join course on users.id = course.mentor_id and users.role = $1 and users.id = $2",['mentor',mentor_id])
+        return {
+            status: 200,
+            data:aTeacherCourse.rows
         }
     }
 

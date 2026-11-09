@@ -12,7 +12,7 @@ staff
     .get("/allStaff/inactive", authGuard, roleGuard("admin"),Staff.staffControllers.allStaffInactive)
     .get("/allStaff", authGuard, roleGuard("admin"), Staff.staffControllers.allStaff)
     .post("/add/Newadmin", authGuard, roleGuard("admin"), valudation.checkAdmin,Staff.staffControllers.createStaff)
-    .delete("/delete/deleteAdmin/:staff_id", authGuard, roleGuard("admin"), Staff.staffControllers.deleteStaff)
+    .put("/delete/deleteAdmin/:staff_id", authGuard, roleGuard("admin"), Staff.staffControllers.deleteStaff)
     .put("/update/updateAdmin/:staff_id", authGuard, roleGuard("admin"), update_valudation.checkUpdateAdmin,Staff.staffControllers.updateStaff)
     .put("/change/AdmintoActive/:staff_id", authGuard, roleGuard("admin"), Staff.staffControllers.changeToActive)
 

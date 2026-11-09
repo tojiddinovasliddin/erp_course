@@ -25,6 +25,7 @@ class Auth{
         return {
             status: 200,
             data: {
+                id:user.rows[0].id,
                 fullname: user.rows[0].fullname,
                 phone: user.rows[0].phone,
                 role: user.rows[0].role,
@@ -41,7 +42,7 @@ class Auth{
         const { fullname, phone, password } = req.body
         const user = await pool.query("select * from users where phone = $1", [phone])
         if (user.rows.length) {
-            throw new Error(409, "The user registered with this phone number");
+            throw new ErrorExteption(409, "The user registered with this phone number");
         }
         await pool.query("insert into users(fullname,phone,password,role) values($1,$2,$3,$4)",[fullname,phone,await argon.hash(password),'student'])
         return {

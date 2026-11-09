@@ -102,3 +102,428 @@
 [11/5/2026, 8:08:25 AM] - PUT - /erp/course/delete/AStudent/ACourse/30 - TypeError: Cannot read properties of undefined (reading 'role')
 [11/5/2026, 8:08:51 AM] - PUT - /erp/course/delete/AStudent/ACourse/30 - TypeError: Cannot read properties of undefined (reading 'role')
 [11/5/2026, 9:16:13 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_mentor_id_fkey"
+[11/5/2026, 10:34:38 AM] - POST - /erp/course/add/NewSection - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/5/2026, 10:34:56 AM] - POST - /erp/course/add/NewSection - Cannot read properties of undefined (reading 'status')
+[11/5/2026, 10:35:44 AM] - POST - /erp/course/add/NewSection - Cannot read properties of undefined (reading 'status')
+[11/5/2026, 10:41:36 AM] - POST - /erp/course/add/NewSection - Cannot read properties of undefined (reading 'status')
+[11/5/2026, 10:45:48 AM] - POST - /erp/course/add/NewSection/12 - Cannot read properties of undefined (reading 'status')
+[11/5/2026, 11:54:58 AM] - PUT - /erp/course/update/Section/1 - Class constructor ErrorExteption cannot be invoked without 'new'
+[11/5/2026, 12:06:53 PM] - GET - /erp/course/ACourse/all/Section/12 - column "section" does not exist
+[11/5/2026, 12:35:27 PM] - DELETE - /erp/course/delete/ASection/1 - column section.section_id does not exist
+[11/5/2026, 12:38:04 PM] - POST - /erp/course/auth/login - Cannot read properties of undefined (reading '0')
+[11/5/2026, 12:45:21 PM] - DELETE - /erp/course/delete/ASection/2 - Cannot read properties of undefined (reading '0')
+[11/5/2026, 1:38:22 PM] - POST - /erp/course/add/NewLesson/1 - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/5/2026, 1:38:36 PM] - POST - /erp/course/add/NewLesson/1 - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/5/2026, 1:39:27 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 1:39:59 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 1:41:45 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 1:42:02 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 1:42:18 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 1:43:20 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'status')
+[11/5/2026, 1:48:26 PM] - POST - /erp/course/add/NewLesson/1 - Cannot destructure property 'video' of 'req.files' as it is undefined.
+[11/5/2026, 1:52:46 PM] - POST - /erp/course/add/NewLesson/1 - path is not defined
+[11/5/2026, 1:53:02 PM] - POST - /erp/course/add/NewLesson/1 - syntax error at or near "("
+[11/5/2026, 1:53:30 PM] - POST - /erp/course/add/NewLesson/1 - syntax error at or near "("
+[11/5/2026, 1:55:37 PM] - POST - /erp/course/add/NewLesson/43 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 1:56:38 PM] - POST - /erp/course/add/NewLesson/43 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 1:57:16 PM] - POST - /erp/course/add/NewLesson/13 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 1:58:19 PM] - POST - /erp/course/add/NewLesson/13 - ErrorException is not defined
+[11/5/2026, 1:58:19 PM] - POST - /erp/course/add/NewLesson/13 - ErrorException is not defined
+[11/5/2026, 1:58:38 PM] - POST - /erp/course/add/NewLesson/13 - ErrorException is not defined
+[11/5/2026, 1:58:50 PM] - POST - /erp/course/add/NewLesson/13 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 1:58:50 PM] - POST - /erp/course/add/NewLesson/13 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 1:58:51 PM] - POST - /erp/course/add/NewLesson/13 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 1:58:51 PM] - POST - /erp/course/add/NewLesson/13 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:00:10 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:24 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:25 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:25 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:25 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:26 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:26 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:26 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:26 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:26 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:26 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:01:27 PM] - POST - /erp/course/add/NewLesson/12 - insert or update on table "lesson" violates foreign key constraint "lesson_section_id_fkey"
+[11/5/2026, 2:02:21 PM] - POST - /erp/course/add/NewLesson/1 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/5/2026, 2:02:29 PM] - POST - /erp/course/add/NewLesson/1 - null value in column "description" of relation "lesson" violates not-null constraint
+[11/5/2026, 2:07:34 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 2:07:49 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 2:07:59 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 2:08:10 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:08:41 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:02 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:03 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:03 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:03 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:03 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:03 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:03 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:04 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:09:22 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'rows')
+[11/5/2026, 2:09:31 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 2:10:08 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 2:11:18 PM] - POST - /erp/course/add/NewLesson/1 - Query values must be an array
+[11/5/2026, 2:23:28 PM] - POST - /erp/course/add/NewSection/45 - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/5/2026, 2:41:01 PM] - GET - /erp/course/ASection/all/Lesson/1 - Cannot read properties of undefined (reading 'id')
+[11/5/2026, 3:14:16 PM] - PUT - /erp/course/update/Section/1 - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/5/2026, 3:18:33 PM] - PUT - /erp/course/update/Section/1 - null value in column "name" of relation "section" violates not-null constraint
+[11/5/2026, 3:21:30 PM] - PUT - /erp/course/update/Section/1 - null value in column "name" of relation "section" violates not-null constraint
+[11/5/2026, 3:24:06 PM] - PUT - /erp/course/update/Section/12 - Class constructor ErrorExteption cannot be invoked without 'new'
+[11/5/2026, 3:24:07 PM] - PUT - /erp/course/update/Section/12 - Class constructor ErrorExteption cannot be invoked without 'new'
+[11/5/2026, 3:24:08 PM] - PUT - /erp/course/update/Section/12 - Class constructor ErrorExteption cannot be invoked without 'new'
+[11/5/2026, 3:25:23 PM] - PUT - /erp/course/update/Lesson/12 - Cannot destructure property 'video' of 'req.files' as it is undefined.
+[11/5/2026, 3:26:05 PM] - PUT - /erp/course/update/Lesson/12 - Cannot destructure property 'video' of 'req.files' as it is undefined.
+[11/5/2026, 3:26:44 PM] - PUT - /erp/course/update/Lesson/12 - Cannot destructure property 'video' of 'req.files' as it is undefined.
+[11/5/2026, 3:27:00 PM] - PUT - /erp/course/update/Lesson/1 - Cannot destructure property 'video' of 'req.files' as it is undefined.
+[11/5/2026, 3:34:57 PM] - POST - /erp/course/add/NewLesson/1 - section_id is not defined
+[11/5/2026, 3:35:35 PM] - POST - /erp/course/add/NewLesson/1 - section_id is not defined
+[11/5/2026, 3:37:25 PM] - PUT - /erp/course/update/Lesson/1 - section_id is not defined
+[11/5/2026, 3:43:20 PM] - PUT - /erp/course/update/Lesson/1 - intro_video is not defined
+[11/5/2026, 3:43:47 PM] - PUT - /erp/course/update/Lesson/1 - column "video" of relation "course" does not exist
+[11/5/2026, 3:58:55 PM] - PUT - /erp/course/update/Lesson/1 - column "video" of relation "course" does not exist
+[11/5/2026, 4:01:29 PM] - PUT - /erp/course/update/Lesson/1 - column "video" of relation "course" does not exist
+[11/5/2026, 4:01:50 PM] - PUT - /erp/course/update/Lesson/1 - column "video" of relation "course" does not exist
+[11/5/2026, 4:53:55 PM] - DELETE - /erp/course/delete/ALessons/1 - sectionServer is not defined
+[11/5/2026, 4:54:54 PM] - DELETE - /erp/course/delete/ALessons/1 - syntax error at or near "lesson"
+[11/5/2026, 4:55:29 PM] - DELETE - /erp/course/delete/ALessons/1 - syntax error at or near "lesson"
+[11/5/2026, 4:56:04 PM] - DELETE - /erp/course/delete/ALessons/1 - syntax error at or near "lesson"
+[11/5/2026, 4:56:14 PM] - DELETE - /erp/course/delete/ALessons/1 - Query values must be an array
+[11/5/2026, 4:56:30 PM] - DELETE - /erp/course/delete/ALessons/1 - Cannot read properties of undefined (reading 'mentor_id')
+[11/5/2026, 5:01:57 PM] - DELETE - /erp/course/delete/ALessons/1 - Cannot read properties of undefined (reading 'mentor_id')
+[11/5/2026, 5:05:51 PM] - DELETE - /erp/course/delete/ALessons/1 - Cannot read properties of undefined (reading 'mentor_id')
+[11/5/2026, 6:18:09 PM] - POST - /erp/course/auth/login - 404
+[11/5/2026, 6:41:36 PM] - POST - /erp/course/register/student - 409
+[11/5/2026, 6:42:32 PM] - POST - /erp/course/register/student - 409
+[11/5/2026, 6:42:51 PM] - POST - /erp/course/register/student - 409
+[11/5/2026, 6:56:21 PM] - POST - /erp/course/auth/login - 404
+[11/5/2026, 6:56:38 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/5/2026, 7:20:10 PM] - GET - /erp/course/user/ShowAll/InActiveStudentCourse - TypeError: Cannot read properties of undefined (reading 'role')
+[11/5/2026, 7:36:29 PM] - POST - /erp/course/user/added/newCourse/1 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 11:54:05 AM] - GET - /erp/course/user/ShowAll/StudentCourse - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 11:54:32 AM] - GET - /erp/course/user/ShowAll/StudentCourse - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 11:55:33 AM] - GET - /erp/course/user/ShowAll/ActiveStudentCourse - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 11:55:35 AM] - GET - /erp/course/user/ShowAll/ActiveStudentCourse - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 12:55:52 PM] - PUT - /erp/course/update/AStudent/1 - Cannot destructure property 'fullname' of 'req.body' as it is undefined.
+[11/6/2026, 12:56:17 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:56:58 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:56:58 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:57:40 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:58:06 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:58:14 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:58:37 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 12:58:49 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 1:01:42 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 1:02:28 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 1:02:41 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 1:02:54 PM] - PUT - /erp/course/update/AStudent/34 - The "path" argument must be of type string. Received an instance of Result
+[11/6/2026, 1:07:34 PM] - PUT - /erp/course/update/AStudent/34 - fs.unlink is not a function
+[11/6/2026, 1:14:09 PM] - PUT - /erp/course/update/AStudent/34 - ENOENT: no such file or directory, unlink '/Users/tojiddinovasliddin/erp_course/backend/src/uploads/student/1793952815981png'
+[11/6/2026, 3:56:03 PM] - POST - /erp/course/category/addNew - column "status" does not exist
+[11/6/2026, 3:56:45 PM] - POST - /erp/course/category/addNew - column "status" does not exist
+[11/6/2026, 3:56:57 PM] - POST - /erp/course/category/addNew - co is not defined
+[11/6/2026, 3:58:06 PM] - POST - /erp/course/category/addNew - column "status" does not exist
+[11/6/2026, 4:12:19 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/6/2026, 4:50:13 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/6/2026, 4:52:22 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/6/2026, 4:52:26 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/6/2026, 5:30:06 PM] - PUT - /erp/course/delete/Course/1 - column "status" does not exist
+[11/6/2026, 6:05:20 PM] - PUT - /erp/course/delete/Assistant/43 - mentor_id is not defined
+[11/6/2026, 6:42:56 PM] - GET - /erp/course/show/aCourse/9 - column category.banner does not exist
+[11/6/2026, 6:47:28 PM] - GET - /erp/course/show/aCourse/9 - syntax error at or near "'Teacher'"
+[11/6/2026, 6:51:29 PM] - GET - /erp/course/show/aCourse/9 - syntax error at or near "from"
+[11/6/2026, 7:00:23 PM] - GET - /erp/course/show/aCourse/9 - missing FROM-clause entry for table "assistant"
+[11/6/2026, 7:05:16 PM] - GET - /erp/course/show/aCourse/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 7:05:42 PM] - GET - /erp/course/show/aCourse/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 7:06:00 PM] - GET - /erp/course/show/aCourse/10 - result is not defined
+[11/6/2026, 7:06:01 PM] - GET - /erp/course/show/aCourse/10 - result is not defined
+[11/6/2026, 7:08:22 PM] - PUT - /erp/course/add/assistent/to/course/10 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/6/2026, 7:09:25 PM] - PUT - /erp/course/add/assistent/to/course/10 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/6/2026, 7:09:26 PM] - PUT - /erp/course/add/assistent/to/course/10 - insert or update on table "course" violates foreign key constraint "course_assistant_id_fkey"
+[11/6/2026, 7:10:55 PM] - PUT - /erp/course/add/assistent/to/course/10 - syntax error at or near "users"
+[11/6/2026, 7:10:56 PM] - PUT - /erp/course/add/assistent/to/course/10 - syntax error at or near "users"
+[11/6/2026, 7:11:20 PM] - PUT - /erp/course/add/assistent/to/course/10 - syntax error at or near "users"
+[11/6/2026, 7:11:43 PM] - PUT - /erp/course/add/assistent/to/course/10 - syntax error at or near "users"
+[11/6/2026, 7:45:44 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:45:45 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:45:45 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:45:46 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:45:46 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:45:46 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:45:46 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:48:08 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:49:29 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:49:45 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:50:16 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:50:21 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 7:51:13 PM] - POST - /erp/course/user/added/newCourse/33 - TypeError: Cannot read properties of undefined (reading 'role')
+[11/6/2026, 8:47:52 PM] - POST - /erp/course/add/NewLesson/1 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 8:51:05 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 8:51:49 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 8:52:01 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 8:52:11 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 8:53:29 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 8:54:11 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 8:54:17 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:15:53 PM] - POST - /erp/course/add/NewSection/10 - syntax error at end of input
+[11/6/2026, 9:16:28 PM] - POST - /erp/course/add/NewSection/10 - syntax error at end of input
+[11/6/2026, 9:16:45 PM] - POST - /erp/course/add/NewSection/10 - syntax error at end of input
+[11/6/2026, 9:21:38 PM] - POST - /erp/course/add/NewSection/10 - syntax error at or near "."
+[11/6/2026, 9:21:58 PM] - POST - /erp/course/add/NewSection/10 - syntax error at or near "."
+[11/6/2026, 9:22:36 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:24:27 PM] - POST - /erp/course/add/NewSection/10 - 404
+[11/6/2026, 9:26:37 PM] - POST - /erp/course/add/NewSection/10 - 404
+[11/6/2026, 9:27:04 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:27:32 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:36:39 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 9:37:09 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 9:40:05 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 9:40:31 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 9:41:17 PM] - POST - /erp/course/add/NewSection/10 - Cannot read properties of undefined (reading 'status')
+[11/6/2026, 9:41:45 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:42:07 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:42:53 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:43:03 PM] - POST - /erp/course/add/NewSection/10 - 409
+[11/6/2026, 9:43:50 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/6/2026, 9:43:53 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/6/2026, 9:44:05 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/6/2026, 9:44:06 PM] - POST - /erp/course/auth/login - The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[11/6/2026, 9:53:48 PM] - GET - /erp/course/ACourse/all/Section/10 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:54:39 PM] - GET - /erp/course/ACourse/all/Section/101 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:54:40 PM] - GET - /erp/course/ACourse/all/Section/101 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:54:43 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:54:43 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:54:52 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:55:25 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:55:51 PM] - GET - /erp/course/ACourse/all/Section/1011 - cu is not defined
+[11/6/2026, 9:56:07 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:57:07 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:57:38 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:58:05 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:58:09 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:58:10 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:58:11 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 9:58:56 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:00:22 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:01:30 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:13 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:20 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:21 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:22 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:24 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:25 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:25 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:02:51 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:03:04 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:03:18 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:03:19 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:03:20 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:04:34 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/6/2026, 10:04:55 PM] - GET - /erp/course/ACourse/all/Section/1011 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 9:01:17 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:02:05 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:02:17 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:02:34 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:02:56 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:02:57 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:03:15 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:03:44 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:04:04 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:04:05 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:04:23 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:06:22 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:07:31 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:07:37 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:07:38 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:07:38 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:08:37 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:01 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:18 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:18 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:19 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:20 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:20 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:21 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:22 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:31 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:32 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:09:34 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:10:11 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:10:27 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:10:35 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:11:17 AM] - PUT - /erp/course/update/Section/11 - 409
+[11/7/2026, 9:35:48 AM] - POST - /erp/course/add/NewLesson/1 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/7/2026, 9:37:09 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 9:37:46 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 9:38:46 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 9:39:32 AM] - POST - /erp/course/add/NewLesson/12 - lesson_id is not defined
+[11/7/2026, 9:39:33 AM] - POST - /erp/course/add/NewLesson/12 - lesson_id is not defined
+[11/7/2026, 9:39:34 AM] - POST - /erp/course/add/NewLesson/12 - lesson_id is not defined
+[11/7/2026, 9:39:49 AM] - POST - /erp/course/add/NewLesson/12 - lesson_id is not defined
+[11/7/2026, 9:41:47 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 9:41:56 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 9:42:01 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 9:42:38 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 9:48:42 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 9:49:02 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 9:49:47 AM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 10:25:45 AM] - GET - /erp/course/ASection/all/Lesson/12 - relation "lessons" does not exist
+[11/7/2026, 10:36:46 AM] - GET - /erp/course/ASection/all/Lesson/12 - course_id is not defined
+[11/7/2026, 10:36:47 AM] - GET - /erp/course/ASection/all/Lesson/12 - course_id is not defined
+[11/7/2026, 10:39:17 AM] - GET - /erp/course/ASection/all/Lesson/1 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 10:39:18 AM] - GET - /erp/course/ASection/all/Lesson/1 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 10:39:49 AM] - GET - /erp/course/ASection/all/Lesson/1 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 10:41:12 AM] - GET - /erp/course/ASection/all/Lesson/12 - column "section_id" does not exist
+[11/7/2026, 10:41:35 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 10:41:54 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 10:42:37 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:15:42 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:15 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:34 AM] - GET - /erp/course/ASection/all/Lesson/11 - unterminated quoted string at or near "'mentor and section.id = $1"
+[11/7/2026, 11:17:41 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:43 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:43 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:43 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:44 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:44 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:44 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:17:44 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'id')
+[11/7/2026, 11:18:31 AM] - GET - /erp/course/ASection/all/Lesson/11 - bind message supplies 1 parameters, but prepared statement "" requires 0
+[11/7/2026, 11:22:21 AM] - GET - /erp/course/ASection/all/Lesson/11 - invalid reference to FROM-clause entry for table "lesson"
+[11/7/2026, 11:22:22 AM] - GET - /erp/course/ASection/all/Lesson/11 - invalid reference to FROM-clause entry for table "lesson"
+[11/7/2026, 11:22:24 AM] - GET - /erp/course/ASection/all/Lesson/12 - invalid reference to FROM-clause entry for table "lesson"
+[11/7/2026, 11:30:11 AM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/7/2026, 11:33:49 AM] - GET - /erp/course/ASection/all/Lesson/18 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:34:14 AM] - GET - /erp/course/ASection/all/Lesson/112 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:34:23 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:34:39 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:35:01 AM] - GET - /erp/course/ASection/all/Lesson/11 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:36:38 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:08 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:12 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:13 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:18 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:19 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:19 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:22 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:23 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:38:45 AM] - GET - /erp/course/ASection/all/Lesson/13 - Cannot read properties of undefined (reading 'mentor_id')
+[11/7/2026, 11:58:40 AM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 11:59:26 AM] - DELETE - /erp/course/delete/ALessons/12 - syntax error at or near "cansade"
+[11/7/2026, 11:59:30 AM] - DELETE - /erp/course/delete/ALessons/13 - syntax error at or near "cansade"
+[11/7/2026, 12:00:25 PM] - DELETE - /erp/course/delete/ALessons/12 - syntax error at or near "CASCADE"
+[11/7/2026, 12:02:03 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:03:53 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:05:42 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:05:43 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:05:43 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:05:43 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:05:43 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:06:12 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:06:14 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:06:16 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:06:20 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:06:31 PM] - DELETE - /erp/course/delete/ASection/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:08:10 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:08:12 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:10:55 PM] - DELETE - /erp/course/delete/ALessons/12 - update or delete on table "section" violates foreign key constraint "lesson_section_id_fkey" on table "lesson"
+[11/7/2026, 12:58:26 PM] - POST - /erp/course/add/NewLesson/12 - Cannot destructure property 'name' of 'req.body' as it is undefined.
+[11/7/2026, 12:59:21 PM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 12:59:44 PM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 12:59:54 PM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 1:00:02 PM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 1:00:02 PM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 1:00:03 PM] - POST - /erp/course/add/NewLesson/12 - Cannot read properties of undefined (reading 'name')
+[11/7/2026, 1:00:05 PM] - POST - /erp/course/add/NewLesson/12 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/7/2026, 1:02:13 PM] - POST - /erp/course/add/NewMaterial/12 - section_id is not defined
+[11/7/2026, 1:02:55 PM] - POST - /erp/course/add/NewMaterial/12 - check_mentor.includes is not a function
+[11/7/2026, 1:03:16 PM] - POST - /erp/course/add/NewMaterial/12 - check_mentor.includes is not a function
+[11/7/2026, 1:10:47 PM] - POST - /erp/course/add/NewMaterial/35 - check_mentor.includes is not a function
+[11/7/2026, 1:11:00 PM] - POST - /erp/course/add/NewMaterial/35 - check_mentor.includes is not a function
+[11/7/2026, 1:16:42 PM] - POST - /erp/course/add/NewMaterial/35 - video is not defined
+[11/7/2026, 1:18:10 PM] - POST - /erp/course/add/NewMaterial/35 - videos is not defined
+[11/7/2026, 1:18:56 PM] - POST - /erp/course/add/NewMaterial/35 - videos is not defined
+[11/7/2026, 1:19:13 PM] - POST - /erp/course/add/NewMaterial/35 - column "lesson_id" of relation "lesson" does not exist
+[11/7/2026, 1:19:37 PM] - POST - /erp/course/add/NewMaterial/35 - column "material" of relation "material" does not exist
+[11/7/2026, 1:19:38 PM] - POST - /erp/course/add/NewMaterial/35 - column "material" of relation "material" does not exist
+[11/7/2026, 1:26:06 PM] - PUT - /erp/course/update/Material/35 - video is not defined
+[11/7/2026, 1:27:16 PM] - PUT - /erp/course/update/Material/1 - video is not defined
+[11/7/2026, 1:29:54 PM] - PUT - /erp/course/update/Material/1 - video is not defined
+[11/7/2026, 1:31:03 PM] - PUT - /erp/course/update/Material/1 - video is not defined
+[11/7/2026, 1:38:22 PM] - GET - /erp/course/ALesson/all/Material/35 - section_id is not defined
+[11/7/2026, 1:45:38 PM] - GET - /erp/course/ALesson/all/Material/35 - syntax error at or near "i"
+[11/7/2026, 1:45:39 PM] - GET - /erp/course/ALesson/all/Material/35 - syntax error at or near "i"
+[11/7/2026, 1:46:54 PM] - GET - /erp/course/ALesson/all/Material/35 - syntax error at or near "i"
+[11/7/2026, 1:47:06 PM] - GET - /erp/course/ALesson/all/Material/35 - co is not defined
+[11/7/2026, 1:47:19 PM] - GET - /erp/course/ALesson/all/Material/35 - syntax error at or near "i"
+[11/7/2026, 1:47:38 PM] - GET - /erp/course/ALesson/all/Material/35 - syntax error at or near "i"
+[11/7/2026, 1:47:56 PM] - GET - /erp/course/ALesson/all/Material/35 - syntax error at or near "i"
+[11/7/2026, 1:49:07 PM] - GET - /erp/course/ALesson/all/Material/35 - section_id is not defined
+[11/7/2026, 1:52:32 PM] - DELETE - /erp/course/delete/AMaterial/1 - lesson_id is not defined
+[11/7/2026, 1:52:45 PM] - DELETE - /erp/course/delete/AMaterial/2 - lesson_id is not defined
+[11/7/2026, 1:53:04 PM] - DELETE - /erp/course/delete/AMaterial/2 - lesson_id is not defined
+[11/7/2026, 2:18:45 PM] - POST - /erp/course/add/NewTask/35 - TaskCheckCheck is not defined
+[11/7/2026, 2:19:07 PM] - POST - /erp/course/add/NewTask/35 - TaskCheckCheck is not defined
+[11/7/2026, 2:19:11 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:19:12 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:19:21 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:20:26 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:20:27 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:20:27 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:20:27 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:20:28 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:20:28 PM] - POST - /erp/course/add/NewTask/3 - TaskCheckCheck is not defined
+[11/7/2026, 2:21:23 PM] - POST - /erp/course/add/NewTask/35 - column "task" of relation "material" does not exist
+[11/7/2026, 2:25:06 PM] - POST - /erp/course/add/NewTask/35 - check_mentor is not defined
+[11/7/2026, 2:25:07 PM] - POST - /erp/course/add/NewTask/35 - check_mentor is not defined
+[11/7/2026, 2:25:32 PM] - POST - /erp/course/add/NewTask/35 - Cannot read properties of undefined (reading '0')
+[11/7/2026, 2:25:33 PM] - POST - /erp/course/add/NewTask/35 - Cannot read properties of undefined (reading '0')
+[11/7/2026, 2:25:50 PM] - POST - /erp/course/add/NewTask/35 - Cannot read properties of undefined (reading '0')
+[11/7/2026, 2:26:01 PM] - POST - /erp/course/add/NewTask/35 - Cannot read properties of undefined (reading '0')
+[11/7/2026, 2:26:39 PM] - POST - /erp/course/add/NewTask/35 - Cannot read properties of undefined (reading '0')
+[11/7/2026, 2:33:27 PM] - PUT - /erp/course/update/Task/12 - TaskCheckCheck is not defined
+[11/7/2026, 2:37:32 PM] - PUT - /erp/course/update/Task/1 - material_id is not defined
+[11/7/2026, 2:38:41 PM] - PUT - /erp/course/update/Task/1 - material is not defined
+[11/7/2026, 3:04:19 PM] - GET - /erp/course/show/MyCourse/:id - Cannot read properties of undefined (reading 'status')
+[11/7/2026, 3:16:53 PM] - GET - /erp/course/show/MyCourse/12 - Cannot read properties of undefined (reading 'status')
+[11/9/2026, 11:10:26 AM] - GET - /erp/course/show/ACategory/AllCourse/1 - Cannot read properties of undefined (reading 'status')
+[11/9/2026, 11:11:36 AM] - GET - /erp/course/show/ACategory/AllCourse/112 - 404
+[11/9/2026, 11:11:37 AM] - GET - /erp/course/show/ACategory/AllCourse/112 - 404
+[11/9/2026, 11:12:13 AM] - GET - /erp/course/show/ACategory/AllCourse/112 - 404
+[11/9/2026, 11:22:24 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - column users.name does not exist
+[11/9/2026, 11:30:53 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:30:54 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:31:33 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:32:06 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:32:33 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:34:09 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:34:40 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:34:41 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:34:41 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:34:41 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 11:34:42 AM] - GET - /erp/course/show/ACategory/AllCourse/3 - next is not a function
+[11/9/2026, 6:13:08 PM] - GET - /erp/course/all/Assistant - syntax error at or near "from"
+[11/9/2026, 6:13:09 PM] - GET - /erp/course/all/Assistant - syntax error at or near "from"
+[11/9/2026, 7:29:01 PM] - GET - /erp/course/user/showAstudent/34 - syntax error at or near "from"
+[11/9/2026, 7:29:01 PM] - GET - /erp/course/user/showAstudent/34 - syntax error at or near "from"
+[11/9/2026, 7:29:07 PM] - GET - /erp/course/user/showAstudent/34 - column users.name does not exist
+[11/9/2026, 7:29:19 PM] - GET - /erp/course/user/showAstudent/34 - column users.ful does not exist
+[11/9/2026, 7:34:06 PM] - GET - /erp/course/user/showAstudent/34 - syntax error at or near "group"
+[11/9/2026, 7:34:52 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:36:06 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:36:07 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:37:06 PM] - GET - /erp/course/user/showAstudent/34 - syntax error at or near "where"
+[11/9/2026, 7:38:30 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:39:07 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:39:51 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:40:29 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:41:10 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:41:11 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:41:44 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 7:42:48 PM] - GET - /erp/course/user/showAstudent/34 - column "users.fullname" must appear in the GROUP BY clause or be used in an aggregate function
+[11/9/2026, 9:32:42 PM] - GET - /erp/course/ACourse/all/Section/10 - 409
+[11/9/2026, 10:37:26 PM] - POST - /erp/course/add/NewExam/1 - Joi.integer is not a function
+[11/9/2026, 10:38:09 PM] - POST - /erp/course/add/NewExam/1 - TaskCheck is not defined
+[11/9/2026, 10:39:30 PM] - POST - /erp/course/add/NewExam/1 - materialService is not defined
+[11/9/2026, 10:40:29 PM] - POST - /erp/course/add/NewExam/1 - examService.addMaterial is not a function

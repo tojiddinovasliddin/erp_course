@@ -6,7 +6,7 @@ const checkAdmin = (req, res, next) => {
         fullname: Joi.string().min(3).max(30).required(),
         phone: Joi.string().pattern(/^\+998(9[0123456789]|3[3]|7[1]|8[8])[0-9]{7}$/).required(),
         password: Joi.string().min(8).max(20).required(),
-        role: Joi.string().lowercase().strict().required()
+
     })
     const { error } = adminCheck.validate(req.body);
     if (error) {
@@ -20,7 +20,7 @@ const checkAdmin = (req, res, next) => {
 const checkMentor = (req, res, next) => {
     const mentorCheck = Joi.object({
         fullname: Joi.string().min(3).max(30).required(),
-        phone: Joi.string().pattern(/^998(9[0123456789]|3[3]|7[1]|8[8])[0-9]{7}$/).required(),
+        phone: Joi.string().pattern(/^\+998(9[0123456789]|3[3]|7[1]|8[8])[0-9]{7}$/).required(),
         password: Joi.string().min(8).max(20).required(),
         photo:Joi.string().optional(),
         experience: Joi.number().optional(),
@@ -32,7 +32,6 @@ const checkMentor = (req, res, next) => {
         instagram: Joi.string().uri().optional(),
         linkedin: Joi.string().uri().optional(),
         github: Joi.string().uri().optional(),
-        role: Joi.string().lowercase().strict().required()
     })
     const { error } = mentorCheck.validate(req.body);
     if (error) {
@@ -95,7 +94,6 @@ const checkAssistant = (req, res, next) => {
         fullname: Joi.string().min(3).max(30).required(),
         phone: Joi.string().pattern(/^\+998(9[0123456789]|3[3]|7[1]|8[8])[0-9]{7}$/).required(),
         password: Joi.string().min(8).max(20).required(),
-        role: Joi.string().lowercase().strict().required(),
         course_id: Joi.number().positive().required()
     })
     const { error } = assistantCheck.validate(req.body);
@@ -106,6 +104,76 @@ const checkAssistant = (req, res, next) => {
         next()
     }
 }
+const checkSection = (req, res, next) => {
+    const categoryCheck = Joi.object({
+        name: Joi.string().min(6).max(30).required()
+    })
+    const { error } = categoryCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkLesson = (req, res, next) => {
+    const lessonCheck = Joi.object({
+        name: Joi.string().min(3).max(30).required(),
+        description: Joi.string().min(3).required(),
+        video:Joi.string().optional()
+    })
+    const { error } = lessonCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkMaterial = (req, res, next) => {
+    const materialCheck = Joi.object({
+        description: Joi.string().min(3).required(),
+        file: Joi.string().optional()
+    })
+    const { error } = materialCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkTask = (req, res, next) => {
+    const TaskCheck = Joi.object({
+        task: Joi.string().min(3).required(),
+        file: Joi.string().optional()
+    })
+    const { error } = TaskCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkExam = (req, res, next) => {
+    const ExamCheck = Joi.object({
+        lesson_id: Joi.number().integer().positive().required(),
+        option_a: Joi.string().min(1).max(1).required(),
+        option_b: Joi.string().min(1).max(1).required(),
+        option_c: Joi.string().min(1).max(1).required(),
+        option_b: Joi.string().min(1).max(1).required(),
+    })
+    const { error } = ExamCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+
+}
+
 
 
 export default {
@@ -114,5 +182,10 @@ export default {
     checkStudent,
     checkCategory,
     checkCourse,
-    checkAssistant
+    checkAssistant,
+    checkSection,
+    checkLesson,
+    checkMaterial,
+    checkTask,
+    checkExam
 }

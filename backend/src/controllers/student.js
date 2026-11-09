@@ -45,25 +45,25 @@ class StudentControllers {
             return next(error)
         }
     }
-    async showAllStudentCourse(req, res, next) {
+    async showAllStudent(req, res, next) {
         try {
-            const data = await studentService.showAllStudentCourse(req)
+            const data = await studentService.showAStudent(req)
             return res.status(data.status).json(data)
         } catch (error) {
             return next(error)
         }
     }
-    async showAllActiveStudentCourse(req, res, next) {
+    async showAllActiveStudent(req, res, next) {
         try {
-            const data = await studentService.showAllActiveStudentCourse(req)
+            const data = await studentService.showAllActiveStudent(req)
             return res.status(data.status).json(data)
         } catch (error) {
             return next(error)
         }
     }
-    async showAllInActiveStudentCourse(req, res, next) {
+    async showAllInActiveStudent(req, res, next) {
         try {
-            const data = await studentService.showAllInactiveStudentCourse(req)
+            const data = await studentService.showAllInactiveStudent(req)
             return res.status(data.status).json(data)
         } catch (error) {
             return next(error)

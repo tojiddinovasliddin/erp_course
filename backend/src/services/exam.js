@@ -1,0 +1,101 @@
+import pool from "../config/db.js"
+import ErrorExteption from "../utils/error.js"
+import path from "path"
+
+class ExamService {
+    async addExam(req) {
+        const { lesson_id } = req.params
+        const { option_a, option_b, option_c, option_d,answer } = req.body
+        const mentor_id = req.user.id
+        const check_lesson = await pool.query("select * from lesson where id = $1", [lesson_id])
+        if (!check_lesson.rows.length) {
+            throw new ErrorExteption(404,"lesson not found")
+        }
+
+        const check_mentor = await pool.query("select users.id from users inner join course on users.id = course.mentor_id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id where users.role = $1 and lesson.id = $2", ['mentor',lesson_id])
+        console.log(check_mentor.rows)
+        if (req.user.role !='admin' && check_mentor.rows[0].id != mentor_id) {
+            throw new ErrorExteption(409,"You can not add exam to this lesson")
+        }
+        await pool.query("insert into exam(lesson_id,option_a,option_b,option_c,option_d,answer) values($1, $2, $3,$4,$5,$6)",[lesson_id,option_a,option_b,option_c,option_d,answer])
+
+        return {
+            status: 201,
+            message:"Exam successfully added"
+        }
+
+    }
+    async updateExam(req) {
+        const { material_id } = req.params
+        const { description } = req.body ||{}
+        const { file } = req.files||{}
+        const mentor_id = req.user.id
+        const check_lesson = await pool.query("select * from material where id = $1", [material_id])
+        if (!check_lesson.rows.length) {
+            throw new ErrorExteption(404, " Material not found")
+        }
+        const check_mentor = await pool.query(" select users.id from users inner join course on users.id = course.mentor_id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id = lesson.id where material.id =$1 and users.role = $2", [material_id,'mentor'])
+        console.log(check_mentor.rows)
+        if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id) {
+            throw new ErrorExteption(409, "You can not update material to this lesson")
+        }
+        const check_material = ["svg", "png", "jpg", "jpeg", "pdf", "doc", "docx",]
+        if (file) {
+            const material = file.name.split(".").at(-1)
+            if (!check_material.includes(material)) {
+                throw new ErrorExteption(415, "Unsupported media type")
+            }
+            else {
+                await pool.query("update material set file = $1 where id = $2", [new Date().getTime() + file.name.split(".")[1],material_id])
+                video.mv(path.join(process.cwd(), "src", "uploads", "lesson", `${new Date().getTime() + path.extname(video.name)}`), (error) => console.log(error))
+            }
+        }
+        if (description) {
+            await pool.query("update material set description = $1 where id = $2", [description, material_id])
+        }
+        return {
+            status: 201,
+            message:"Lessons update successfully"
+        }
+    }
+    async allExam(req) {
+        const { lesson_id } = req.params
+        const mentor_id = req.user.id
+        const check_lesson = await pool.query("select * from material where lesson_id = $1", [lesson_id])
+        if (!check_lesson.rows.length) {
+            throw new ErrorExteption(404,"Before seeing material, you add lesson")
+        }
+        const check_mentor = await pool.query("select users.id from users inner join course on course.mentor_id  = users.id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id = lesson.id where users.role = $1 and lesson.id = $2",['mentor',lesson_id])
+        const check_student = await pool.query("select student_course.student_id from course inner join section on section.course_id = course.id inner join student_course on student_course.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id  = lesson.id where material.lesson_id = $1",[lesson_id] )
+
+        if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id && check_student.rows[0] != mentor_id) {
+            throw new ErrorExteption(409, "You can not see material of this section")
+        }
+        const allACourseLesson = await pool.query("select * from material where lesson_id  = $1", [lesson_id])
+        return {
+            status: 200,
+            data: allACourseLesson.rows
+        }
+
+    }
+    async deleteExam(req) {
+        const { material_id } = req.params
+        const mentor_id = req.user.id
+        const check_material = await pool.query("select * from material where id = $1", [material_id])
+        if (!check_material.rows.length) {
+            throw new ErrorExteption(404, "Material not found")
+        }
+        const check_mentor = await pool.query("select users.id from users inner join course on course.mentor_id  = users.id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id = lesson.id  where users.role = $1 and material.id = $2", ['mentor', material_id])
+        if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id) {
+            throw new ErrorExteption(409, "You can not delete material")
+        }
+        await pool.query("delete from material where id =$1",[material_id])
+        return {
+            status: 200,
+            message: "Material successfully deleted"
+        }
+    }
+}
+
+const examService = new ExamService()
+export default examService

@@ -71,14 +71,6 @@ class MentorControllers{
             next(error)
         }
     }
-    async showATeacherCourses(req, res, next) {
-        try {
-            const data = await mentorService.showATeacherCourses(req)
-            return res.status(data.status).json(data)
-        } catch (error) {
-            next(error)
-        }
-    }
 
 }
 const mentorControllers = new MentorControllers()

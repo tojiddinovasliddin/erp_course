@@ -103,12 +103,89 @@ const checkUpdateStudent = (req, res, next) => {
         next()
     }
 }
+const checkUpdateSection = (req, res, next) => {
+    const categoryCheck = Joi.object({
+        name: Joi.string().min(6).max(30).required()
+    })
+    const { error } = categoryCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkUpdateLesson = (req, res, next) => {
+    const lessonCheck = Joi.object({
+        name: Joi.string().min(3).max(30).optional(),
+        description: Joi.string().min(3).optional(),
+        section_id: Joi.number().positive().optional(),
+        video: Joi.string().optional()
+    })
+    const { error } = lessonCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkUpdateMaterial = (req, res, next) => {
+    const materialCheck = Joi.object({
+        description: Joi.string().min(3).optional(),
+        file: Joi.string().optional()
+    })
+    const { error } = materialCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkUpdateTask = (req, res, next) => {
+    const TaskCheck = Joi.object({
+        task: Joi.string().min(3).optional(),
+        file: Joi.string().optional()
+    })
+    const { error } = TaskCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+}
+const checkUpdateExam = (req, res, next) => {
+    const ExamCheck = Joi.object({
+        lesson_id: Joi.number().integer().positive().required(),
+        option_a: Joi.string().min(1).max(1).optional(),
+        option_b: Joi.string().min(1).max(1).optional(),
+        option_c: Joi.string().min(1).max(1).optional(),
+        option_b: Joi.string().min(1).max(1).optional(),
+    })
+    const { error } = ExamCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+
+}
+
+
 export default {
     checkUpdateAdmin,
     checkUpdateMentor,
     checkUpdateCategory,
     checkUpdateCourse,
     checkUpdateAssistant,
-    checkUpdateStudent
+    checkUpdateStudent,
+    checkUpdateSection,
+    checkUpdateLesson,
+    checkUpdateMaterial,
+    checkUpdateTask,
+    checkUpdateExam
 
 }

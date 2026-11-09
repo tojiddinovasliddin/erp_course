@@ -4,9 +4,9 @@ import ErrorExteption from "../utils/error.js"
 class CourseCategoryServer{
     async addCategory(req) {
         const { name } = req.body
-        const check_name = await pool.query("select * from category where status = $1",['active'])
+        const check_name = await pool.query("select * from category where name = $1",[name])
         if (check_name.rows.length) {
-            throw new ErrorExteption(408,"This category already added")
+            throw new ErrorExteption(409,"This category already added")
         }
         await pool.query("insert into category(name) values($1)", [name])
         return {
@@ -50,7 +50,7 @@ class CourseCategoryServer{
     async UpdateCategory(req) {
         const { category_id } = req.params
         const { name } = req.body
-        const check_category = await pool.query("select * from category")
+        const check_category = await pool.query("select * from category where id = $1",[category_id])
         if (!check_category) {
             throw new Error(400,"Category not found");
         }
@@ -58,7 +58,7 @@ class CourseCategoryServer{
         await pool.query("update category set name =$1 where id = $2", [name, category_id])
         return {
             status: 201,
-            message:"Update successfully"
+            message:"Category update successfully"
         }
 
     }
@@ -75,6 +75,7 @@ class CourseCategoryServer{
             message: "Update successfully"
         }
     }
+
 }
 
 const courseCategoryServer = new CourseCategoryServer()

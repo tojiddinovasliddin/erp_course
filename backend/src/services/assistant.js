@@ -54,34 +54,34 @@ class AssistantService{
 
     }
     async deleteAssistant(req) {
-        const { mentor_id } = req.params
-        let check_user = await pool.query("select * from users where id = $1 and status = $2 and role = $3 ", [mentor_id, 'active', 'mentor'])
+        const { assistant_id } = req.params
+        let check_user = await pool.query("select * from users where id = $1 and status = $2 and role = $3 ", [assistant_id, 'active', 'assistant'])
 
         if (!check_user.rows.length) {
-            throw new ErrorExteption(404, "Mentor not found")
+            throw new ErrorExteption(404, "assistant not found")
         }
-        await pool.query("update users set status ='inactive' where id = $1", [mentor_id])
+        await pool.query("update users set status ='inactive' where id = $1", [assistant_id])
         return {
             status: 200,
-            message: "Mentor successfully deleted"
+            message: "Assistand successfully deleted"
         }
     }
     async allAssistant(req) {
-        const all_assistant = await pool.query("select * from users where role =$1",['assistant'])
+        const all_assistant = await pool.query("select users.id as users_id,users.fullname,course.name as course_name,users.photo,users.phone,users.role,users.create_at,users.status from users inner join course on users.id = course.assistant_id where users.role =$1",['assistant'])
         return{
             status: 200,
             message:all_assistant.rows
         }
     }
     async allAssistantActive(req) {
-        let all_mentorActive = await pool.query("select * from users where role =$1  and status = $2",['assistant','active'])
+        const all_mentorActive = await pool.query("select users.id as users_id,users.fullname,course.name as course_name,users.photo,users.phone,users.role,users.create_at,users.status from users inner join course on users.id = course.assistant_id where users.role =$1  and users.status = $2",['assistant','active'])
         return{
             status: 200,
             message: all_mentorActive.rows
         }
     }
     async allAssistantInactive(req) {
-        const all_assistantActive = await pool.query("select * from users where role =$1  and status = $2", ['assistant', 'inactive'])
+        const all_assistantActive = await pool.query("select users.id as users_id,users.fullname,course.name as course_name,users.photo,users.phone,users.role,users.create_at,users.status from users inner join course on users.id = course.assistant_id where users.role =$1  and users.status = $2", ['assistant', 'inactive'])
         return{
             status: 200,
             message: all_assistantActive.rows
@@ -106,7 +106,7 @@ class AssistantService{
         if (!check_assistant.rows.length) {
             throw new ErrorExteption(404, "You are not assistant")
         }
-        const aAssistantCourse = await pool.query("select * from users inner join course on users.id = course.assistant_id and users.role = $1 and users.id = $2", ['assistant',assistant_id])
+        const aAssistantCourse = await pool.query("select users.fullname as assistant_name,users.photo,users.role,users.phone,users.create_at,course.name as course_name from users inner join course on users.id = course.assistant_id and users.role = $1 and users.id = $2", ['assistant',assistant_id])
         return {
             status: 200,
             data: aAssistantCourse.rows

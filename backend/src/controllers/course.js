@@ -85,7 +85,14 @@ class CourseController{
             next(error)
         }
     }
-
+    async showAllCourseACategory(req, res, next) {
+        try {
+            const data = await courseService.showAllCourseACategory(req)
+            return res.status(data.status).json(data)
+        } catch (error) {
+            return next(error)
+        }
+    }
 
 }
 

@@ -2,6 +2,7 @@ import pool from "../config/db.js"
 import ErrorExteption from "../utils/error.js"
 import argon from "argon2"
 import path from "path"
+import fs from "fs"
 
 class StudentService {
     async addNewStudent(req) {
@@ -20,6 +21,7 @@ class StudentService {
         }
     }
     async connectCourseToStudet(req) {
+
         const {student_id} = req.params
         const { course_id } = req.body
         const checkStudentCourse = await pool.query("select * from student_course where student_id = $1", [student_id])
@@ -50,10 +52,9 @@ class StudentService {
         const { student_id } = req.params
         const check_student = await pool.query("select * from users where id = $1 and role = $2", [student_id, 'student'])
         if (!check_student.rows.length) {
-            throw new ErrorExteption(409,"You are not a student")
+            throw new ErrorExteption(409,"You are admin a student")
         }
-        const student = await pool.query("select * from users inner join student_course on users.id = student_course.student_id inner join course on student_course.course_id = course.id where users.id = $1",[student_id])
-
+        const student = await pool.query("select users.fullname as student_name,users.phone,users.photo,users.role,users.create_at, count(student_course.id) as student_course_cnt from users inner join student_course on student_course.student_id = users.id where users.id = $1 group by users.id;",[student_id])
         return {
             status: 200,
             data:student.rows
@@ -101,31 +102,33 @@ class StudentService {
             message:"The student delete successfully with their all courses"
         }
     }
-    async showAllStudentCourse(req) {
-        const allStudent = await pool.query("select * from users inner join student_course on users.id = student_course.student_id inner join course on student_course.course_id = course.id")
+    async showAllStudent(req) {
+        const allStudent = await pool.query("select id,fullname as student_name,phone,photo,create_at,status from users where role = $1",['student'])
         return {
             status: 200,
             data:allStudent.rows
         }
     }
-    async showAllActiveStudentCourse(req) {
-        const allStudent = await pool.query("select * from users inner join student_course on users.id = student_course.student_id inner join course on student_course.course_id = course.id where student_course.status = $1",['active'])
+    async showAllActiveStudent(req) {
+        const allStudent = await pool.query("select id,fullname as student_name,phone,photo,create_at,status  from users where role = $1 and status = $2" ,['student','active'])
         return {
             status: 200,
             data: allStudent.rows
         }
     }
-    async showAllInactiveStudentCourse(req) {
-        const allStudent = await pool.query("select * from users inner join student_course on users.id = student_course.student_id inner join course on student_course.course_id = course.id where student_course.status = $1",['inactive'])
+    async showAllInactiveStudent(req) {
+        const allStudent = await pool.query("select id,fullname as student_name,phone,photo,create_at,status  from users where role = $1 and status = $2", ['student', 'inactive'])
         return {
             status: 200,
             data: allStudent.rows
         }
     }
+
+
     async updateStudent(req) {
         const { student_id } = req.params
-        const { fullname, phone, password } = req.body
-        const { photo } = req.files
+        const { fullname, phone, password } = req.body || {}
+        const { photo } = req.files || {}
         const check_student = await pool.query("select * from users where id = $1 and role = $2", [student_id, 'student'])
         if (!check_student.rows.length) {
             throw new ErrorExteption(400, "Student not found");
@@ -146,8 +149,12 @@ class StudentService {
                 throw new ErrorExteption(415, "Unsupported media type")
             }
             else {
+                let fileName = await pool.query("select photo from users where id =$1 and role = $2",[student_id,'student'])
+                fileName = (fileName.rows[0].photo)
+                console.log(fileName)
+                await fs.promises.unlink(path.join(process.cwd(), "src", "uploads", "student", fileName),(error)=>console.log(error))
                 await pool.query("update users set photo = $1 where id = $2", [new Date().getTime() + photo.name.split(".")[1], student_id])
-                photo.mv(path.join(process.cwd(), "src", "uploads", "admin", `${new Date().getTime() + path.extname(photo.name)}`), (error) => console.log(error))
+                photo.mv(path.join(process.cwd(), "src", "uploads", "student", `${new Date().getTime() + path.extname(photo.name)}`), (error) => console.log(error))
             }
             return {
                 status: 201,

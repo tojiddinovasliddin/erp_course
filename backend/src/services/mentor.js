@@ -91,21 +91,21 @@ class MentorService{
         }
     }
     async allMentor(req) {
-        const all_mentor = await pool.query("select * from users where role =$1",['mentor'])
+        const all_mentor = await pool.query("select id,fullname,phone,photo,role,create_at,status from users where role =$1",['mentor'])
         return{
             status: 200,
             message:all_mentor.rows
         }
     }
     async allMentorActive(req) {
-        const all_mentorActive = await pool.query("select * from users where role =$1 and status = $2", ['mentor','active'])
+        const all_mentorActive = await pool.query("select id,fullname,phone,photo,role,create_at,status from users where role =$1 and status = $2", ['mentor','active'])
         return{
             status: 200,
             message: all_mentorActive.rows
         }
     }
     async allMentorInactive(req) {
-        const all_mentorActive = await pool.query("select * from users where role =$1 and status = $2",['mentor','inactive'])
+        const all_mentorActive = await pool.query("select id,fullname,phone,photo,role,create_at,status from users where role =$1 and status = $2",['mentor','inactive'])
         return{
             status: 200,
             message: all_mentorActive.rows
@@ -127,22 +127,14 @@ class MentorService{
     }
     async showAMentor(req) {
         const { mentor_id } = req.params
+        const check_mentor = await pool.query("select * from users where id = $1 and role = $2", [mentor_id, 'mentor'])
+        if (!check_mentor.rows.length) {
+            throw new ErrorExteption(409, "The user's role is not mentor")
+        }
         const mentor = await pool.query("select * from users inner join course on users.id = course.mentor_id where users.id = $1 and users.role = $2",[mentor_id,'mentor'])
         return {
             status: 200,
             data:mentor.rows
-        }
-    }
-    async showATeacherCourses(req) {
-        const { mentor_id } = req.params
-        const check_mentor = await pool.query("select  * from users where id = $1 and role = $2", [mentor_id, "mentor"])
-        if (!check_mentor.rows.length) {
-            throw new ErrorExteption(404,"You are not mentor")
-        }
-        const aTeacherCourse = await pool.query("select * from users inner join course on users.id = course.mentor_id and users.role = $1 and users.id = $2",['mentor',mentor_id])
-        return {
-            status: 200,
-            data:aTeacherCourse.rows
         }
     }
 

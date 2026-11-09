@@ -20,7 +20,8 @@ class StaffControllers{
 
     }
     async updateStaff(req, res,next) {
-      try {
+        try {
+
           const data = await staffServic.updateStaff(req)
           return res.status(data.status).json(data)
       } catch (error) {

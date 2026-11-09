@@ -158,11 +158,12 @@ const checkUpdateTask = (req, res, next) => {
 }
 const checkUpdateExam = (req, res, next) => {
     const ExamCheck = Joi.object({
-        lesson_id: Joi.number().integer().positive().required(),
+        question: Joi.string().min(5).max(50).optional(),
         option_a: Joi.string().min(1).max(1).optional(),
         option_b: Joi.string().min(1).max(1).optional(),
         option_c: Joi.string().min(1).max(1).optional(),
-        option_b: Joi.string().min(1).max(1).optional(),
+        option_d: Joi.string().min(1).max(1).optional(),
+        answer: Joi.string().min(1).max(1).optional()
     })
     const { error } = ExamCheck.validate(req.body);
     if (error) {

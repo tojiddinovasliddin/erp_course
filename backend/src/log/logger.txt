@@ -527,3 +527,17 @@
 [11/9/2026, 10:38:09 PM] - POST - /erp/course/add/NewExam/1 - TaskCheck is not defined
 [11/9/2026, 10:39:30 PM] - POST - /erp/course/add/NewExam/1 - materialService is not defined
 [11/9/2026, 10:40:29 PM] - POST - /erp/course/add/NewExam/1 - examService.addMaterial is not a function
+[11/9/2026, 10:46:31 PM] - POST - /erp/course/add/NewExam/1 - Cannot destructure property 'option_a' of 'req.body' as it is undefined.
+[11/9/2026, 10:53:55 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:54:52 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:54:54 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:55:57 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:56:46 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:57:18 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:58:20 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 10:58:41 PM] - POST - /erp/course/add/NewExam/35 - column "option_c" of relation "exam" does not exist
+[11/9/2026, 11:12:41 PM] - GET - /erp/course/ALesson/all/Exam/12 - column "lesson_id" does not exist
+[11/9/2026, 11:14:51 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')
+[11/9/2026, 11:16:35 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')
+[11/9/2026, 11:17:00 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')
+[11/9/2026, 11:17:19 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')

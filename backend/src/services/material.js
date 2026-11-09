@@ -73,8 +73,8 @@ class MaterialService {
         }
         const check_mentor = await pool.query("select users.id from users inner join course on course.mentor_id  = users.id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id = lesson.id where users.role = $1 and lesson.id = $2",['mentor',lesson_id])
         const check_student = await pool.query("select student_course.student_id from course inner join section on section.course_id = course.id inner join student_course on student_course.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id  = lesson.id where material.lesson_id = $1",[lesson_id] )
-
-        if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id && check_student.rows[0] != mentor_id) {
+        console.log(check_student.rows)
+        if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id && check_student.rows[0].student_id!= mentor_id) {
             throw new ErrorExteption(409, "You can not see material of this section")
         }
         const allACourseLesson = await pool.query("select * from material where lesson_id  = $1", [lesson_id])

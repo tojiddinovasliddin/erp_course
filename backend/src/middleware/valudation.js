@@ -120,7 +120,7 @@ const checkLesson = (req, res, next) => {
     const lessonCheck = Joi.object({
         name: Joi.string().min(3).max(30).required(),
         description: Joi.string().min(3).required(),
-        video:Joi.string().optional()
+        video:Joi.optional()
     })
     const { error } = lessonCheck.validate(req.body);
     if (error) {
@@ -159,13 +159,30 @@ const checkTask = (req, res, next) => {
 const checkExam = (req, res, next) => {
     const ExamCheck = Joi.object({
         question: Joi.string().min(5).max(50).required(),
-        option_a: Joi.string().min(1).max(1).required(),
-        option_b: Joi.string().min(1).max(1).required(),
-        option_c: Joi.string().min(1).max(1).required(),
-        option_d: Joi.string().min(1).max(1).required(),
-        answer: Joi.string().min(1).max(1).required(),
+        option_a: Joi.string().uppercase().min(1).max(1).required(),
+        option_b: Joi.string().uppercase().min(1).max(1).required(),
+        option_c: Joi.string().uppercase().min(1).max(1).required(),
+        option_d: Joi.string().uppercase().min(1).max(1).required(),
+        answer: Joi.string().uppercase().min(1).max(1).required(),
     })
     const { error } = ExamCheck.validate(req.body);
+    if (error) {
+        return next(new errorExteption(400, error.message))
+    }
+    else {
+        next()
+    }
+
+}
+
+const checkAnswerExam = (req, res, next) => {
+    const AnswerExamCheck = Joi.object({
+        exam_id: Joi.number().integer().positive().required(),
+        student_id: Joi.number().integer().positive().required(),
+        answer: Joi.string().uppercase().min(1).max(1).required(),
+
+    })
+    const { error } = AnswerExamCheck.validate(req.body);
     if (error) {
         return next(new errorExteption(400, error.message))
     }
@@ -188,5 +205,6 @@ export default {
     checkLesson,
     checkMaterial,
     checkTask,
-    checkExam
+    checkExam,
+    checkAnswerExam
 }

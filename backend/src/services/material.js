@@ -5,8 +5,14 @@ import path from "path"
 class MaterialService {
     async addMaterial(req) {
         const { lesson_id } = req.params
-        const { description } = req.body
-        const { file } = req.files
+        const { description } = req.body || {}
+        const { file } = req.files || {}
+        if (!description) {
+            throw new ErrorExteption(409,"You must write description")
+        }
+        if (!file) {
+            throw new ErrorExteption(409, "You must upload files")
+        }
         const mentor_id = req.user.id
         const check_lesson = await pool.query("select * from lesson where id = $1", [lesson_id])
         if (!check_lesson.rows.length) {
@@ -41,7 +47,7 @@ class MaterialService {
             throw new ErrorExteption(404, " Material not found")
         }
         const check_mentor = await pool.query(" select users.id from users inner join course on users.id = course.mentor_id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id inner join material on material.lesson_id = lesson.id where material.id =$1 and users.role = $2", [material_id,'mentor'])
-        console.log(check_mentor.rows)
+
         if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id) {
             throw new ErrorExteption(409, "You can not update material to this lesson")
         }

@@ -12,5 +12,6 @@ exam
     .put("/update/Exam/:exam_id",update_valudation.checkUpdateExam,authGuard,roleGuard("mentor","admin"),examControllers.updateExam)
     .get("/ALesson/all/Exam/:lesson_id", authGuard, roleGuard("mentor","admin","student"),examControllers.allExam)
     .delete("/delete/AnExam/:exam_id", authGuard, roleGuard("mentor", "admin"), examControllers.deleteExam)
+    .post("/answer/Exam/question/:lesson_id",valudation.checkAnswerExam ,authGuard,roleGuard("student"),examControllers.addAnswerToExam)
 
 export default exam

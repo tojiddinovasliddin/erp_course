@@ -38,6 +38,15 @@ class ExamControllers {
         }
 
     }
+    async addAnswerToExam(req, res, next) {
+        try {
+            const data = await examService.addAnswerToExam(req, next)
+            return res.status(data.status).json(data)
+        } catch (error) {
+            return next(error)
+        }
+    }
+
 
 }
 const examControllers = new ExamControllers

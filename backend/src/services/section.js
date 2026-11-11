@@ -10,6 +10,10 @@ class SectionServer {
         if (!check_course.rows.length) {
             throw new ErrorExteption(404,"Course not found")
         }
+        const check_section = await pool.query("select * from section where name = $1", [name])
+        if (check_section.rows.length) {
+            throw new ErrorExteption(409, "You add already this section")
+        }
         const check_mentor = await pool.query("select users.id from users inner join course on users.id = course.mentor_id  where course.id = $1 and users.role = $2",[course_id,'mentor'])
 
         if (req.user.role != 'admin' && check_mentor.rows[0].id != mentor_id) {
@@ -47,12 +51,10 @@ class SectionServer {
     }
     async allSection(req) {
         const { course_id } = req.params
-        console.log(req.params.course_id)
         const mentor_id = req.user.id
-        const check_course = await pool.query("select * from course where id = $1",[course_id])
-        console.log(check_course.rows)
+        const check_course = await pool.query("select * from course where id = $1", [course_id])
         if (!check_course.rows.length) {
-            throw new Error(404,"Course not found")
+            throw new ErrorExteption(404,"Course not found")
         }
         const check_mentor = await pool.query("select users.id from users inner join course on users.id = course.mentor_id  where course.id = $1 and users.role = $2", [course_id, 'mentor'])
         const check_student = await pool.query("select student_course.student_id from course inner join section on section.course_id = course.id inner join student_course on student_course.course_id = course.id where course.id = $1", [course_id])

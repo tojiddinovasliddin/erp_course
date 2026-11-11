@@ -71,6 +71,7 @@ class AssistantControllers{
             next(error)
         }
     }
+   
 }
 const assistantControllers = new AssistantControllers()
 export default assistantControllers

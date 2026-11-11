@@ -6,12 +6,16 @@ class LessonServer {
     async addLesson(req) {
         const { section_id } = req.params
         const { name, description } = req.body
-        const { video } = req.files
+        const { video } = req.files || {}
+        if (!video) {
+            throw new ErrorExteption(409, "You must upload the video")
+        }
         const mentor_id = req.user.id
         const check_lesson = await pool.query("select * from section where id = $1", [section_id])
         if (!check_lesson.rows.length) {
             throw new ErrorExteption(404,"Section not found")
         }
+        
         const check_video = ["mp4", "mpeg", "mov", "avi", "mkv", "webm", "ogv", "3gp", "wmv", "flv"]
         const videos = video.name.split(".").at(-1)
         const check_mentor = await pool.query("select users.id from users inner join course on users.id = course.mentor_id inner join section on section.course_id = course.id where users.role = $1 and section.id = $2", ['mentor',section_id])

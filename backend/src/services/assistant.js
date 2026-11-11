@@ -112,6 +112,7 @@ class AssistantService{
             data: aAssistantCourse.rows
         }
     }
+ 
 }
 const assistantService = new AssistantService()
 export default assistantService

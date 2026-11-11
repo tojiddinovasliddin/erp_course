@@ -14,7 +14,8 @@ mentor
     .get("/all/Mentor", authGuard, roleGuard("admin"), mentorControllers.allMentor)
     .get("/all/MentorActive", mentorControllers.allMentorActive)
     .get("/all/MentorInactive", authGuard, roleGuard("admin"), mentorControllers.allMentorInactive)
-    .get("/show/aMentor/:mentor_id", authGuard, roleGuard("admin"), mentorControllers.showAMentor)
+    .get("/show/aMentor/:mentor_id", authGuard, roleGuard("admin", "mentor"), mentorControllers.showAMentor)
+    .get("/show/MyCourses/:mentor_id",authGuard,roleGuard("mentor","admin"),mentorControllers.showMyCouses)
 
 
 export default mentor

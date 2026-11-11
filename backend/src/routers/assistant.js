@@ -14,8 +14,6 @@ assistant
     .get("/all/Assistant", authGuard, roleGuard("admin"), assistantControllers.allAssistant)
     .get("/all/AssistantActive", authGuard, roleGuard("admin"),assistantControllers.allAssistantActive)
     .get("/all/AssistantInactive", authGuard, roleGuard("admin"), assistantControllers.allAssistantInactive)
-    .get("/show/aAssistant/:assistant_id", authGuard, roleGuard("admin"), assistantControllers.showA_assistant)
-
-
-
+    .get("/show/aAssistant/:assistant_id", authGuard, roleGuard("admin","assistant"), assistantControllers.showA_assistant)
+  
 export default assistant

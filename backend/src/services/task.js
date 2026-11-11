@@ -5,13 +5,20 @@ import path from "path"
 class TaskService {
     async addTask(req) {
         const { lesson_id } = req.params
-        const { task } = req.body
-        const { file } = req.files
+        const { task } = req.body ||{}
+        const { file } = req.files ||{}
         const mentor_id = req.user.id
         const check_lesson = await pool.query("select * from lesson where id = $1", [lesson_id])
         if (!check_lesson.rows.length) {
             throw new ErrorExteption(404,"lesson not found")
         }
+        if (!task) {
+            throw new ErrorExteption(404,"You must upload task")
+        }
+        if (!file) {
+            throw new ErrorExteption(404, "You must upload file")
+        }
+
         const check_tasks = ["svg", "png", "jpg", "jpeg", "pdf","doc","docx","xls",]
         const tasks = file.name.split(".").at(-1)
         const check_mentor = await pool.query("select users.id from users inner join course on users.id = course.mentor_id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id where users.role = $1 and lesson.id = $2", ['mentor',lesson_id])

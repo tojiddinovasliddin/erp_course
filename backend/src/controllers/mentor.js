@@ -72,6 +72,16 @@ class MentorControllers{
         }
     }
 
+    async showMyCouses(req, res, next) {
+        try {
+            const data = await mentorService.showMyCouses(req)
+            return res.status(data.status).json(data)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+
 }
 const mentorControllers = new MentorControllers()
 export default mentorControllers

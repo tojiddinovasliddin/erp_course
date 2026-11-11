@@ -21,10 +21,9 @@ class StudentService {
         }
     }
     async connectCourseToStudet(req) {
-
         const {student_id} = req.params
         const { course_id } = req.body
-        const checkStudentCourse = await pool.query("select * from student_course where student_id = $1", [student_id])
+        const checkStudentCourse = await pool.query("select * from student_course where student_id = $1 and course_id = $2", [student_id,course_id])
         if (checkStudentCourse.rows.length) {
             throw new ErrorExteption(409, "The student already added this course")
         }
@@ -54,7 +53,7 @@ class StudentService {
         if (!check_student.rows.length) {
             throw new ErrorExteption(409,"You are admin a student")
         }
-        const student = await pool.query("select users.fullname as student_name,users.phone,users.photo,users.role,users.create_at, count(student_course.id) as student_course_cnt from users inner join student_course on student_course.student_id = users.id where users.id = $1 group by users.id;",[student_id])
+        const student = await pool.query("select  users.fullname as student_name,users.phone,users.photo,users.role,users.create_at, count(student_course.id) as student_course_cnt from users inner join student_course on student_course.student_id = users.id where users.id = $1 group by users.id;",[student_id])
         return {
             status: 200,
             data:student.rows
@@ -123,8 +122,6 @@ class StudentService {
             data: allStudent.rows
         }
     }
-
-
     async updateStudent(req) {
         const { student_id } = req.params
         const { fullname, phone, password } = req.body || {}
@@ -173,6 +170,22 @@ class StudentService {
         return {
             status: 201,
             message: "Update successfully"
+        }
+    }
+    async myCourses(req) {
+        const { student_id } = req.params
+        const check_student = await pool.query("select * from users where id = $1 and role = $2", [student_id, "student"])
+
+        if (!check_student.rows.length) {
+            throw new ErrorExteption(404,"YOU are not student")
+        }
+        if (check_student.rows[0].id != req.user.id) {
+            throw new ErrorExteption(409,"You can not see the course")
+        }
+        const studentCourses = await pool.query("select student.fullname as student_name, student_course.course_id,student_course.student_id, student_course.create_at,course.banner as course_banner,course.name as course_name,mentor.fullname as mentor_name from student_course inner join course on student_course.course_id = course.id inner join users as mentor on mentor.id  = course.mentor_id left join users as student on student.id = student_course.student_id where student_course.student_id = $1",[student_id])
+        return {
+            status: 200,
+            data:studentCourses.rows
         }
     }
 

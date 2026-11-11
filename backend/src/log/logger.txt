@@ -541,3 +541,110 @@
 [11/9/2026, 11:16:35 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')
 [11/9/2026, 11:17:00 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')
 [11/9/2026, 11:17:19 PM] - GET - /erp/course/ALesson/all/Exam/35 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 10:45:17 AM] - GET - /erp/course/show/aAssistant/12 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 10:53:12 AM] - GET - /erp/course/show/aAssistant/12 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 10:53:31 AM] - GET - /erp/course/show/aAssistant/12 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:09:39 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:10:10 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:10:23 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:10:52 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:11:00 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:11:26 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:14:38 AM] - GET - /erp/course/show/aAssistant/42 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:14:40 AM] - GET - /erp/course/show/aAssistant/43 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:15:10 AM] - GET - /erp/course/show/aAssistant/43 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:15:30 AM] - GET - /erp/course/show/aAssistant/43 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:15:49 AM] - GET - /erp/course/show/aAssistant/43 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 11:51:51 AM] - GET - /erp/course/user/myCourses/1 - syntax error at or near "selet"
+[11/10/2026, 12:12:02 PM] - GET - /erp/course/user/myCourses/34 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 12:12:05 PM] - GET - /erp/course/user/myCourses/33 - Cannot read properties of undefined (reading 'id')
+[11/10/2026, 2:16:09 PM] - POST - /erp/course/answer/Exam/question/1 - Cannot destructure property 'exam_id' of 'req.body' as it is undefined.
+[11/10/2026, 2:21:21 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:21:36 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:21:55 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:23:06 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:23:17 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:23:41 PM] - POST - /erp/course/answer/Exam/question/35 - column "exam_id" does not exist
+[11/10/2026, 2:23:42 PM] - POST - /erp/course/answer/Exam/question/35 - column "exam_id" does not exist
+[11/10/2026, 2:24:18 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:28:55 PM] - POST - /erp/course/answer/Exam/question/35 - Cannot read properties of undefined (reading 'status')
+[11/10/2026, 2:37:39 PM] - POST - /erp/course/answer/Exam/question/35 - duplicate key value violates unique constraint "answer_exam_id_key"
+[11/10/2026, 3:15:19 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/10/2026, 3:26:39 PM] - POST - /erp/course/add/NewLesson/16 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 3:27:12 PM] - POST - /erp/course/add/NewLesson/16 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:13:51 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:14:07 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:16:22 PM] - POST - /erp/course/add/NewCourse - insert or update on table "course" violates foreign key constraint "course_category_id_fkey"
+[11/10/2026, 6:18:12 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:18:17 PM] - POST - /erp/course/add/NewCourse - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 6:26:46 PM] - GET - /erp/course/user/showAstudent/50 - missing FROM-clause entry for table "course"
+[11/10/2026, 6:32:45 PM] - POST - /erp/course/add/NewSection/20 - duplicate key value violates unique constraint "section_name_key"
+[11/10/2026, 6:34:52 PM] - GET - /erp/course/ACourse/all/Section/22 - 404
+[11/10/2026, 6:35:14 PM] - GET - /erp/course/ACourse/all/Section/22 - 404
+[11/10/2026, 6:35:32 PM] - GET - /erp/course/ACourse/all/Section/22 - 404
+[11/10/2026, 6:37:40 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:40:33 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:40:53 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:04 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:05 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:05 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:05 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:44 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:41:59 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:42:33 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:42:34 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:43:21 PM] - POST - /erp/course/add/NewLesson/20 - Joi.file is not a function
+[11/10/2026, 6:43:29 PM] - POST - /erp/course/add/NewLesson/20 - Joi.file is not a function
+[11/10/2026, 6:43:30 PM] - POST - /erp/course/add/NewLesson/20 - Joi.file is not a function
+[11/10/2026, 6:43:41 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:43:52 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:43:52 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:44:18 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:44:27 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:44:27 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:44:34 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:45:30 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:46:03 PM] - POST - /erp/course/add/NewLesson/20 - video is not defined
+[11/10/2026, 6:46:04 PM] - POST - /erp/course/add/NewLesson/20 - video is not defined
+[11/10/2026, 6:46:16 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:47:05 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:47:06 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:47:39 PM] - POST - /erp/course/add/NewLesson/20 - Cannot destructure property 'video' of 'req.files' as it is null.
+[11/10/2026, 6:48:25 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:48:26 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:48:27 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:48:28 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:48:55 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 6:48:56 PM] - POST - /erp/course/add/NewCourse - Cannot destructure property 'banner' of 'req.files' as it is null.
+[11/10/2026, 7:00:13 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:00:24 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:03:52 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:04:26 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:04:49 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:04:50 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:05:12 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:05:24 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:05:25 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:05:51 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:05:52 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:06:11 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'description' of 'req.body' as it is undefined.
+[11/10/2026, 7:06:16 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'file' of 'req.files' as it is null.
+[11/10/2026, 7:06:18 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'file' of 'req.files' as it is null.
+[11/10/2026, 7:06:33 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot destructure property 'file' of 'req.files' as it is null.
+[11/10/2026, 7:07:10 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:07:40 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:07:41 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:07:56 PM] - POST - /erp/course/add/NewMaterial/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:11:07 PM] - POST - /erp/course/add/NewTask/35 - Cannot destructure property 'task' of 'req.body' as it is undefined.
+[11/10/2026, 7:12:01 PM] - POST - /erp/course/add/NewTask/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:12:02 PM] - POST - /erp/course/add/NewTask/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:12:36 PM] - POST - /erp/course/add/NewTask/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:12:37 PM] - POST - /erp/course/add/NewTask/40 - Cannot read properties of undefined (reading 'name')
+[11/10/2026, 7:29:02 PM] - GET - /erp/course/user/myCourses/51 - invalid reference to FROM-clause entry for table "users"

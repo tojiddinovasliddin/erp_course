@@ -137,6 +137,23 @@ class MentorService{
             data:mentor.rows
         }
     }
+    async showMyCouses(req) {
+        const {mentor_id } = req.params
+        const check_mentor = await pool.query("select * from users where id = $1 and role = $2", [mentor_id, "mentor"])
+
+        if (!check_mentor.rows.length) {
+            throw new ErrorExteption(404, "YOU are not mentor")
+        }
+        console.log(req.user.id,check_mentor.rows[0].id)
+        if (req.user.role != 'admin' && check_mentor.rows[0].id != req.user.id) {
+            throw new ErrorExteption(409, "You can not see the course lists")
+        }
+        const allMyCourse = await pool.query("select users.fullname as mentor_name, course.banner, course.name as course_name from course inner join users on users.id = course.mentor_id where course.mentor_id = $1",[mentor_id])
+        return {
+            status: 200,
+            data:allMyCourse.rows
+        }
+    }
 
 }
 const mentorService = new MentorService()

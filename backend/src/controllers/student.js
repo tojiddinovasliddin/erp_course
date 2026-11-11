@@ -86,6 +86,16 @@ class StudentControllers {
             next(error)
         }
     }
+    async myCourses(req, res, next) {
+        try {
+            const data = await studentService.myCourses(req)
+            return res.status(data.status).json(data)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+
 
 }
 const studentControllers = new StudentControllers()

@@ -103,6 +103,39 @@ class ExamService {
             message: "Exam successfully deleted"
         }
     }
+    async addAnswerToExam(req) {
+        const { lesson_id } = req.params
+        const { exam_id, student_id, answer } = req.body
+
+        const check_lesson = await pool.query("select * from lesson where id = $1", [lesson_id])
+        const check_exam = await pool.query("select * from exam where id = $1",[exam_id])
+        if (!check_lesson.rows.length) {
+            throw new ErrorExteption(404,"Lesson not found")
+        }
+        if (!check_exam.rows.length) {
+            throw new ErrorExteption(404, "Exam not found")
+        }
+        const check_student = await pool.query("select student_course.student_id from student_course inner join course on course.id = student_course.course_id inner join section on section.course_id = course.id inner join lesson on lesson.section_id = section.id where student_course.student_id = $1 and lesson.id = $2", [student_id, lesson_id])
+
+        if (!check_student.rows.length) {
+            throw new ErrorExteption(404,"Student not connect to this course")
+        }
+        const check_answer = await pool.query("select * from exam where id = $1 and answer = $2", [exam_id, answer])
+        if (!check_answer.rows.length) {
+            throw new ErrorExteption(404,"THis option has not in this exam")
+        }
+        const check_exam2 = await pool.query("select * from answer where exam_id = $1", [exam_id])
+        if (check_exam2.rows.length) {
+            throw new ErrorExteption(409,"You could answer to this question before")
+        }
+
+        await pool.query("insert into answer(lesson_id,exam_id,student_id,answer) values($1,$2,$3,$4)", [lesson_id, exam_id, student_id, answer])
+        return {
+            status: 201,
+            message:"Save the answer exam"
+        }
+    }
+    
 }
 
 const examService = new ExamService()

@@ -4,11 +4,21 @@ import path from "path"
 
 class CourseServer {
         async AddCourse(req) {
-                const { banner, intro_video } = req.files
+                const { banner, intro_video } = req.files || {}
                 const { name, description, level, price, category_id, mentor_id } = req.body
                 const check_mentor = await pool.query("select * from users where role = $1 and id = $2 and status = $3", ['mentor',mentor_id,'active'])
                 if (!check_mentor.rows.length) {
                         throw new ErrorExteption(409, "You are not mentor")
+                }
+                if (!banner) {
+                        throw new ErrorExteption(404, "You must upload banner")
+                }
+                if (!intro_video) {
+                        throw new ErrorExteption(404,"You must upload intro_video")
+                }
+                const check_category = await pool.query("select * from category where id = $1", [category_id])
+                if (!check_category.rows.length) {
+                        throw new ErrorExteption(404,"Category not found")
                 }
 
                 const check_banner = ["png", "jpg", "webp", "svg", "gif", "avif", "ico"]
